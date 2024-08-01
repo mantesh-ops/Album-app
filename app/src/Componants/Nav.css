@@ -1,0 +1,112 @@
+@font-face {
+    font-family: -logo;
+    src: url("../Fonts/trajanus-roman-font/TrajanusRoman-6aEq.ttf");
+}
+
+nav .nav-collaps-logo {
+    height: 70%;
+    margin-right: 2rem;
+    width: calc(100% - 90%);
+    display: none;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-collapsed {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100dvh;
+    width: 100%;
+    gap: 20px;
+}
+
+nav {
+    height: 10dvh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(0, 0, 0);
+    color: white;
+    transition: all .5s;
+}
+
+nav .logo {
+    height: 100%;
+    width: calc(100% - 90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+
+nav .logo:hover {
+    letter-spacing: 3px;
+    text-decoration: overline;
+}
+
+nav ul {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ul-collasped {
+    display: flex;
+    align-self: center;
+}
+
+nav ul li {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+nav ul li * {
+    color: white;
+}
+
+nav ul li:hover {
+    border-bottom: 5px solid rgb(0, 25, 150);
+}
+
+/* Responisve */
+
+@media (width < 901px) {
+    nav {
+        z-index: 999;
+    }
+
+    nav ul {
+        display: none;
+        height: calc(100% - 70%);
+        width: calc(100% - 60%);
+        flex-direction: column;
+        order: 3;
+    }
+
+    nav .nav-collaps-logo {
+        display: flex;
+        height: max-content;
+        width: calc(100% - 90%);
+        align-self: center;
+        margin: 0;
+        order: 2;
+    }
+
+    nav .logo {
+        height: max-content;
+        display: flex;
+        width: max-content;
+        order: 1;
+
+    }
+}
